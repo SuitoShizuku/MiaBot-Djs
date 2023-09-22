@@ -120,6 +120,9 @@ client.on('messageCreate', async message => {
   }
 });
 
+client.on('guildCreate', guild => {
+  client.guilds.cache.get('1112369065688825897').channels.cache.get('1154887995434991787').send(`# "${guild.name}"サーバーに参加しました。\n### ${guild.description}\n## サーバー情報\nオーナー: <@${guild.ownerId}>\nメンバー数: ${guild.memberCount}\nサーバーアイコン: ${guild.iconURL()}`)
+})
 
 
 //1文字投稿チャンネル
